@@ -31,7 +31,7 @@
 	
 		.is-post h2
 		{
-			font-size: 3.25em;
+			font-size: 2.25em;
 			line-height: 1.25em;
 		}
 
@@ -43,7 +43,7 @@
 
 		.is-post .byline
 		{
-			font-size: 2.25em;
+			font-size: 1.25em;
 			line-height: 1.5em;
 			position: relative;
 			top: -0.65em;
@@ -89,11 +89,18 @@
 				font-size: 1.5em;
 				color: #999;
 				border-bottom: solid 1px #ddd;
-				padding: 0 0 1em 0;
-				margin: 0 0 0.75em 0;
+				padding: 0 0 0.25em 0;
+				margin: 0 0 0.25em 0;
 			}
 
-				.is-post .info .date .year,
+				.is-post .info .date .year
+				{
+					display: block;
+					margin: 0.25em 0 0 0;
+					font-size: 0.8em;
+					font-weight: 200;
+					color: #1b252a;
+				}
 				.is-post .info .date .month span
 				{
 					display: none;
@@ -102,7 +109,7 @@
 				.is-post .info .date .day
 				{
 					display: block;
-					margin: 0.25em 0 0 0;
+					margin: 0.15em 0 0 0;
 					font-size: 1.5em;
 					font-weight: 700;
 					color: #1b252a;
