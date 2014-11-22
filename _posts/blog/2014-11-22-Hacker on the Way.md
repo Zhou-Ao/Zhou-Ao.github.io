@@ -2,6 +2,7 @@
 layout: blog
 title: Hacker on the Way
 description: My first blog to the world.
+category: blog
 ---
 ##Words in the Beginning##
 Finally, I am writing in my own blog. During past couple of days, a newbie, I, who  only knew little about the World Wide Web, started to create interesting things based on the web out of curiosity. The feeling of building things is cool, especially something meaningful. I hope from now on, I can learn to become a hacker, devoting myself to solving problems with powerful computational tools, and make the world little bit prettier.
