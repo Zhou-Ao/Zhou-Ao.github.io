@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: 听雨
 category: project
 description: 不知道这是杯具还是悲剧，反正就是可以假装下雨了。
