@@ -1,2 +1,6 @@
 # Outputting
 permalink:     none
+
+#Enable Automatic Sitemap Generation
+gems:
+  - jekyll-sitemap

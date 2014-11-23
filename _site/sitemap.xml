@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>/blog/My%20Childhood%20Story%20with%20Computer.html</loc>
+    
+    <lastmod>2014-11-25T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/Hacker%20on%20the%20Way.html</loc>
+    
+    <lastmod>2014-11-22T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>/404.html</loc>
+    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>/me/</loc>
+    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>/Blog Template/index.html</loc>
+    <lastmod>2013-04-25T11:10:06Z</lastmod>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>/google5b7597b6aba121fc.html</loc>
+    <lastmod>2014-11-23T22:43:40Z</lastmod>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
