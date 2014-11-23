@@ -24,8 +24,14 @@
 		line-height: 1;
 	}
 
-	ol, ul {
-		list-style: none;
+	ul {
+		list-style: disc;
+		margin-left: 20px;
+	}
+
+	ol {
+		list-style: decimal;
+		margin-left: 20px;
 	}
 
 	blockquote, q {

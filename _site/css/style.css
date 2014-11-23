@@ -328,6 +328,7 @@
 		ul.style1 li
 		{
 			padding-left: 0.5em;
+			margin-left: 20px;
 		}
 	
 	ol.style1
@@ -338,7 +339,8 @@
 
 		ol.style1 li
 		{
-			padding-left: 0.25em;
+			padding-left: 0.5em;
+			margin-left: 20px;
 		}
 
 	.link-icon24
