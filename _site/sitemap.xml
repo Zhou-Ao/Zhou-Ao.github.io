@@ -18,31 +18,55 @@
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>/project/2048%20AI.html</loc>
+    
+    <lastmod>2014-11-21T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>/project/FADS.html</loc>
+    
+    <lastmod>2014-10-23T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>/project/Plasma.html</loc>
+    
+    <lastmod>2014-04-01T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
   
   <url>
     <loc>/404.html</loc>
-    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <lastmod>2014-11-24T00:46:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <lastmod>2014-11-24T00:46:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>/me/</loc>
-    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <lastmod>2014-11-24T00:46:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
-    <lastmod>2014-11-23T23:36:49+08:00</lastmod>
+    <lastmod>2014-11-24T00:46:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
