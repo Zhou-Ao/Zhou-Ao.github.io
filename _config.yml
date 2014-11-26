@@ -4,3 +4,8 @@ permalink:     none
 #Enable Automatic Sitemap Generation
 gems:
   - jekyll-sitemap
+
+#Enalbe MathJax
+markdown: kramdown
+kramdown:
+  input: GFM
