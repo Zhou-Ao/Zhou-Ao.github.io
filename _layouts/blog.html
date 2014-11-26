@@ -5,6 +5,14 @@
     <title>Blog | Zhou Ao</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     {% include Header.html %}
+    <!-- Include TOC Generator for Markdown -->
+    <script src="/js/jquery.toc.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/toc.css">
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("article").toc();
+    });
+    </script>
 </head>
 
 <body class="left-sidebar">
@@ -16,7 +24,7 @@
                 <!-- Post -->
                 <article class="is-post is-post-excerpt">
                     <header>
-                        <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+                        <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
                         <span class="byline">{{ page.description }}</span>
                     </header>
                     <div class="info">

@@ -51,6 +51,15 @@
 
 <!-- Set Background Height -->
 <script type="text/javascript" src="/js/height.js"></script>
+
+    <!-- Include TOC Generator for Markdown -->
+    <script src="/js/jquery.toc.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/toc.css">
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("article").toc();
+    });
+    </script>
 </head>
 
 <body class="left-sidebar">
@@ -62,7 +71,7 @@
                 <!-- Post -->
                 <article class="is-post is-post-excerpt">
                     <header>
-                        <h2><a href="">Hacker on the Way</a></h2>
+                        <h1><a href="">Hacker on the Way</a></h1>
                         <span class="byline">My first blog to the world.</span>
                     </header>
                     <div class="info">
