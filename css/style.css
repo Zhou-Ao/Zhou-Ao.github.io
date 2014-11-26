@@ -606,7 +606,7 @@
 
 	#wrapper
 	{
-		position: relative;
+		position: absolute;
 	}
 
 /*********************************************************************************/
@@ -692,7 +692,6 @@
 	{
 		position: relative;
 		z-index: 1;
-		padding-bottom: 180px;
 	}
 
 /*********************************************************************************/
@@ -715,6 +714,7 @@
 
 		#copyright:before
 		{
+			background: inherit;
 			content: '';
 			border-top: solid 1px;
 			border-bottom: solid 1px;
