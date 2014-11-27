@@ -190,12 +190,12 @@
 			
 				.is-post .info .date .year
 				{
-					display: none;
+					display: inline;
 				}
 				
 				.is-post .info .date .month span
 				{
-					display: none;
+					display: inline;
 				}
 
 			.is-post .info .stats
