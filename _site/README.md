@@ -3,7 +3,7 @@ Zhou-Ao.github.io
 
 Personal Webpage
 
-The website is published at [**blog.zhouao.tk**](blog.zhouao.tk)
+The website is published at [**blog.zhouao.tk**](http://blog.zhouao.tk)
 
 LICENSE
 =================
