@@ -1,34 +1,87 @@
 ---
-layout: about_index
+layout: blank
 ---
 
-<div id="content" class="mobileUI-main-content">
-    <div id="content-inner">
-        <!-- Post -->
-        <article class="is-post is-post-excerpt">
-            <header>
-                <h2>About My Website</h2>
-                <span class="byline">This website is my personal space where I settle down to my ideas and put my projects in order.</span>
+<!DOCTYPE HTML>
+<!--
+    Modified by Zhou Ao based on HTML5 UP Strata.
+-->
+<html>
+
+<head>
+    <title>About | Zhou Ao</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Introduction to Zhou Ao's Blog" />
+    <meta name="keywords" content="Zhou Ao, Blog, Tech, Developer, Programming, Physics, Peking University, Project" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="../js/blog/jquery.min.js"></script>
+    <script src="../js/blog/jquery.poptrox.min.js"></script>
+    <script src="../js/blog/skel.min.js"></script>
+    <script src="../js/blog/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/blogskel.css" />
+        <link rel="stylesheet" href="../css/blogstyle.css" />
+        <link rel="stylesheet" href="../css/blogstyle-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+
+<body id="top">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhou Ao' Photo" />
+        </a>
+        <h1><strong>Zhou Ao | About</strong></h1>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- One -->
+        <section id="one">
+            <header class="major">
+                <h2>About This Website</h2>
             </header>
-            <div class="info">
-                <span class="date">
-            <span class="month">About</span>
-                <!--            <span class="day">{{ post.date|date:"%d" }}</span>
-            <span class="year">{{ post.date|date:"%Y" }}</span> -->
-                </span>
-            </div>
-            <img src="/images/about.jpg" alt="Photo with my lover at Chaotianmen, Chongqing, taken by Dang Hao" />
-            </imag>
-            <br />
-            <br />
-            <strong>
+            <h3><p>This website is my personal space where I settle down to my ideas and put my projects in order.</p></h3>
             <p>
-                I design and develop this site using <a href="https://github.com/mojombo/jekyll">Jekyll</a>, following this <a href="/Blog Template/index.html">styleguide</a>. Hosting by <a href="https://pages.github.com/">Github Pages</a>. Source available on <a href="https://github.com/Zhou-Ao/Zhou-Ao.github.io/">github</a>.
-            </p>
+                I design and develop this site using 
+                <a href="http://jekyllrb.com/">
+                    <img src="/images/jekyll-logo.png" width="100" height="30" alt="Jekyll • Transform your plain text into static websites and blogs">
+                </a>, 
+                following these two styleguides, <a href="http://html5up.net/uploads/demos/aerial">Aerial</a> and <a href="http://html5up.net/uploads/demos/strata">Strate</a>.
+            <p>
+                Hosting by
+                <a href="https://github.com">
+                    <img src="/images/github-logo.png" width="100" height="30" alt="GitHub • Social coding">
+                </a>.
+                Source available on <a href="https://github.com/Zhou-Ao/Zhou-Ao.github.io/">github</a>.
             <p>
                 Unless specified otherwise, contents on this site is licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
             </p>
-            </strong>
-        </article>
+            <br />
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
     </div>
-</div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="/blog" class="fa fa-home">Blog</a>
+            </li>
+            <li><a href="/project" class="fa fa-pencil">Project</a>
+            </li>
+            <li><a href="/me" class="fa fa-book">Me</a>
+            </li>
+            <li><a href="/about" class="fa fa-cog">About</a>
+            </li>
+        </ul>
+        <br /><br /><br />
+        {% include copyright.html %}
+    </footer>
+    {% include js.html %}
+</body>
+
+</html>

@@ -45,35 +45,35 @@
   
   <url>
     <loc>/404.html</loc>
-    <lastmod>2014-11-27T16:08:37+08:00</lastmod>
+    <lastmod>2014-11-27T23:56:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2014-11-27T16:08:37+08:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2014-11-27T23:56:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2014-11-27T16:08:37+08:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2014-11-27T23:56:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/me/</loc>
-    <lastmod>2014-11-27T16:08:37+08:00</lastmod>
+    <lastmod>2014-11-27T23:56:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
-    <lastmod>2014-11-27T16:08:37+08:00</lastmod>
+    <lastmod>2014-11-27T23:56:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,14 +87,14 @@
   </url>
   
   <url>
-    <loc>/Blog Template/index.html</loc>
-    <lastmod>2013-04-25T11:10:06Z</lastmod>
+    <loc>/google5b7597b6aba121fc.html</loc>
+    <lastmod>2014-11-23T22:43:40Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>/google5b7597b6aba121fc.html</loc>
-    <lastmod>2014-11-23T22:43:40Z</lastmod>
+    <loc>/index.html</loc>
+    <lastmod>2014-11-27T21:58:39Z</lastmod>
     <priority>0.6</priority>
   </url>
   
