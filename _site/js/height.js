@@ -11,10 +11,10 @@ $(document).ready(function() {
 		}
 	);
 
-	$("#copyright").css({
-		position: 'absolute',
-		bottom: '5px',
-		left: '0px'
-	});;
+	// $("#copyright").css({
+	// 	position: 'absolute',
+	// 	bottom: '5px',
+	// 	left: '0px'
+	// });;
 
 });

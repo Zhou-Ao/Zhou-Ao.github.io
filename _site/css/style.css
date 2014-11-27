@@ -677,7 +677,7 @@
 	
 		#content:after
 		{
-/*			content: '';
+			content: '';
 			display: block;
 			position: absolute;
 			left: 0;
@@ -685,7 +685,7 @@
 			width: 100%;
 			height: 100%;
 			background-image: url('images/bg2.png');
-			opacity: 0.5;*/
+			opacity: 0.5;
 		}
 	
 	#content-inner
