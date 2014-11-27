@@ -5,7 +5,10 @@ permalink:     none
 gems:
   - jekyll-sitemap
 
+ # Avoid pygments.rb
+highlighter: false
+
 #Enalbe MathJax
-markdown: kramdown
-kramdown:
-  input: GFM
+markdown: redcarpet
+redcarpet:
+  extensions: ["fenced_code_blocks", "with_toc_data", "no_intra_emphasis"]

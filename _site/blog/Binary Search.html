@@ -3,8 +3,7 @@
 
 <head>
     <title>Blog | Zhou Ao</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <!-- Include Font -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <!-- Include Font -->
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 
 <!-- Include jQuery -->
@@ -62,7 +61,7 @@
                 <!-- Post -->
                 <article class="is-post is-post-excerpt">
                     <header>
-                        <h2><a href="">Binary Search Time Complexity: Average Number of Comparisons</a></h2>
+                        <h2 id="Binary Search Time Complexity: Average Number of Comparisons"><a href="">Binary Search Time Complexity: Average Number of Comparisons</a></h2>
                         <span class="byline">Introduce binary search, and calculate the average number of comparisons in the algorithm.</span>
                     </header>
                     <div class="info">
@@ -72,69 +71,74 @@
                         <span class="year">2014</span>
                         </span>
                     </div>
+                    <!-- Tree of Contents -->
+                    <div class="toc"></div>
                     <h2 id="introduction-to-binary-search">Introduction to Binary Search</h2>
+
 <p>Binary search is a classic and basic search algorithm which is applicable when the array is ordered. This method using the the divide and conquer approach takes advantage of the information of the order of the elements and tries to do less work. Undoubtedly, binary search is very efficient.</p>
 
 <h2 id="java-code-implementation">Java Code Implementation</h2>
-<pre><code class="language-java">int binarySearch (int [ ] E, int first, int last, int k)		 //T(n)
-    {														// -|
-    	if (last &lt; fir					   						//  |
-    		return -1;									   	//  |
-    	else {											   	//  c
-    		int mid = (first + last) / 2;			    			//  |
-    		if (k == E[mid]) return mid;			    		 	//  |
-    		else if (k &lt; E[mid])								// -|
-    			return binarySearch (E, first, mid − 1, k); 	//T(n/2)
-    		else
-    			return binarySearch (E, mid + 1, last, k);  	//T(n/2)
-    	}
+<div class="highlight"><pre><code class="language-java" data-lang="java">int binarySearch (int [ ] E, int first, int last, int k)
+    {
+        if (last &lt; first
+            return -1;
+        else {
+            int mid = (first + last) / 2;
+            if (k == E[mid]) return mid;
+            else if (k &lt; E[mid])
+                return binarySearch (E, first, mid − 1, k);
+            else
+                return binarySearch (E, mid + 1, last, k);
+        }
     }
-</code></pre>
-
+</code></pre></div>
 <h2 id="time-complexity-analysis">Time Complexity Analysis</h2>
 
-<h3 id="worst-case">1. Worst-case</h3>
+<h3 id="1.-worst-case">1. Worst-case</h3>
+
 <p>The implementation of binary search is a recursive function, so recursive equation should be established for time complexity analysis.</p>
 
-<p>Look back to the code, it is not difficult to find the recursive equation.
-<script type="math/tex">T(n)=T({n\over 2})+c</script><br />
+<p>Look back to the code, if we assume the total time of binary search is $T(n)$, for each recursive invocation, the time is $T({n \over 2})$. So it is not difficult to find the recursive equation.
+$$T(n)=T({n\over 2})+c$$
 Assume $n=2^k$,</p>
 
-<p><script type="math/tex">T(n)=T({n\over 4})+2*c=T({n\over 8})+3*c=...=T({n\over 2^k})+k*c=T(1)+k*c</script>.</p>
+<p>$$T(n)=T({n\over 4})+2c=T({n\over 8})+3c=...=T({n\over 2^k})+kc=T(1)+kc$$.</p>
 
 <p>Notice that $k=log_2(n)$ and $T(1)=c$,</p>
 
 <p>so $T(n)=(k+1)c=(log_2(n)+1)c=O(log(n))$.</p>
 
-<h3 id="average-case">2. Average-case</h3>
-<p>Assume q is the probability that a search is successful and $n=2^k-1$.</p>
+<h3 id="2.-average-case">2. Average-case</h3>
 
-<p>If $A_s(n)$is the average number of comparisons that a successful search ans $A_f(n)$ is the number of comparisons in an unsuccessful search. Then by the law of expectation,
-<script type="math/tex">A_q(n)=qA_s(n)+(1-q)A_f(n).</script><br />
+<p>Assume $ q $ is the probability that a search is successful and $ n=2^k-1 $.</p>
+
+<p>If $A_s(n)$ is the average number of comparisons that a successful search and $A_f(n)$ is the number of comparisons in an unsuccessful search. Then by the law of expectation,
+$$A_q(n)=qA_s(n)+(1-q)A_f(n).$$
 Next, we should calculate $A_s(n)$ and $A_f(n)$ respectively.</p>
 
 <p>For $A_f(n)$, we can use the result of the worst-case analysis, because for unsuccessful search we have to conduct the search until <code>last &lt; first</code>.That is to say, the average case for unsuccessful search is $\lfloor log_2(n) \rfloor +1=log_2(n+1)$, taking $c=1$.</p>
 
-<p>For $A_s(n)$, the thing is a little bit more complex. We have to find the number of comparisons for every possible case. It is easy to see that if the key is at the position of $n \over 2$, only 1 comparison is necessary to find the key. Also if the key is at the position of $n\over4$ or $3n \over 4$, with 2 comparisons we can find the key. And so on, if the key is located at $(2i-1){n \over 2^m}$ for $i=1,2…2^{m-1}$, m comparisons are needed.</p>
+<p>For $As(n)$, the thing is a little bit more complex. We have to find the number of comparisons for every possible case. It is easy to see that if the key is at the position of $n \over 2$, only 1 comparison is necessary to find the key. Also if the key is at the position of $n\over4$ or $3n \over 4$, with 2 comparisons we can find the key. And so on, if the key is located at $(2i-1){n \over 2^m}$ for $i=1,2...2^{m-1}$, m comparisons are needed.</p>
 
-<p><img src="/images/binary_search.png" alt="Figure 1 Deduction of the Average Number of Comparisons in Successful Binary Search" /></p>
+<p><img src="/images/binary_search.png" alt="Figure 1 Deduction of the Average Number of Comparisons in Successful Binary Search"></p>
 
-<p>For all the cases, the sum of the elements $1+2+3+…+2^{m-1}$ should be $n$. That is to say, <script type="math/tex">{1+2+4+...+2^{m-1}}=</script><script type="math/tex">1*(1-2^{m})\over1-2</script><script type="math/tex">=2^{m}-1</script><script type="math/tex">=n=2^k-1</script>. So <script type="math/tex">m=k.</script></p>
+<p>For all the cases, the sum of the elements $1+2+3+...+2^{m-1}$ should be $n$. That is to say, ${1+2+4+...+2^{m-1}}={(1-2^{m})\over 1-2}=2^{m}-1=n=2^k-1$.</p>
+
+<p>So $$m=k.$$</p>
 
 <p>Assume the possibility of all the cases is equal to $1\over n$, so the average number of comparisons in successful binary search is
-<script type="math/tex">\sum_{i=1}^{k}{1\over n}*i*2^{i-1}.</script></p>
+$$\sum_{i=1}^{k}{1\over n}*i*2^{i-1}.$$</p>
 
 <p>By the formula
-<script type="math/tex">\sum_{i=1}^{k}i*2^{i-1}=2^kk-2^k+1,</script></p>
+$$\sum_{i=1}^{k}i*2^{i-1}=2^kk-2^k+1,$$</p>
 
 <p>we can get that
-<script type="math/tex">A_s(n)=log_2(n+1)+{log_2(n+1)\over n} -1.</script></p>
+$$A_s(n)=log_2(n+1)+{log_2(n+1)\over n} -1.$$</p>
 
 <p>So after all,
-<script type="math/tex">A_q(n)=q{log_2(n+1) \over n}-q+log_2(n+1).</script></p>
+$$A_q(n)=q{log_2(n+1) \over n}-q+log_2(n+1).$$</p>
 
 <p>Through the analysis, we can draw the conclusion that the average case of binary search is $qO({log(n) \over n})-q+O(log(n)).$</p>
-
 
                 </article>
 
@@ -193,6 +197,7 @@ var disqus_shortname = 'zhouao'; // required: replace example with your forum sh
     <gcse:searchbox-only></gcse:searchbox-only>
 </section>
 
+            
             <!-- Copyright -->
             <!-- Copyright -->
 <div id="copyright">
@@ -219,6 +224,12 @@ var disqus_shortname = 'zhouao'; // required: replace example with your forum sh
 
         </div>
     </div>
+    <script type="text/javascript" src="/js/toc.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.toc').toc();
+    });
+    </script>
 </body>
 
 </html>
