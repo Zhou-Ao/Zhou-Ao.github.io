@@ -50,6 +50,14 @@
 
 <!-- Set Background Height -->
 <script type="text/javascript" src="/js/height.js"></script>
+
+<script type="text/javascript" src="/js/toc.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".toc").toc();
+});
+</script>
+
 </head>
 
 <body class="left-sidebar">
@@ -66,7 +74,7 @@
                     </header>
                     <div class="info">
                         <span class="date">
-                            <span class="month">Nov</span>
+                        <span class="month">Nov</span>
                         <span class="day">22</span>
                         <span class="year">2014</span>
                         </span>
@@ -160,7 +168,6 @@
 <p>I believe I can keep my passion.</p>
 
                 </article>
-
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -243,12 +250,6 @@ var disqus_shortname = 'zhouao'; // required: replace example with your forum sh
 
         </div>
     </div>
-    <script type="text/javascript" src="/js/toc.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.toc').toc();
-    });
-    </script>
 </body>
 
 </html>
