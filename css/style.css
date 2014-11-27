@@ -700,6 +700,9 @@
 
 	#copyright
 	{
+		position: absolute;
+		bottom: 5px;
+		left: 0px;
 	}
 
 		#copyright p
