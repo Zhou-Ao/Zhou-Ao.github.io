@@ -78,6 +78,14 @@
         <br /><br /><br />
         {% include copyright.html %}
     </footer>
+    <!-- Include Tree of Content -->
+    <script type="text/javascript" src="/js/toc.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.toc').toc();
+        });
+    </script>
+    <script type="text/javascript" src="/js/disqus.js"></script>
     {% include js.html %}
 </body>
 

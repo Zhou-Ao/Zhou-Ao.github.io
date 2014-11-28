@@ -10,7 +10,7 @@
     },
     settings = $.extend(defaults, options);
 
-    var headers = $('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6').filter(function() {
+    var headers = $('#main h1, #main h2, #main h3, #main h4, #main h5, #main h6').filter(function() {
       // get all headers with an ID
       if (!this.id) {
         this.id = $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
