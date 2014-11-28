@@ -5,9 +5,9 @@
 <html>
 
 <head>
-    <title>About | Zhou Ao</title>
+    <title>Search | Zhou Ao</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Introduction to Zhou Ao's Blog" />
+    <meta name="description" content="Zhou Ao's Blog" />
     <meta name="keywords" content="Zhou Ao, Blog, Tech, Developer, Programming, Physics, Peking University, Project" />
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="../js/blog/jquery.min.js"></script>
@@ -28,54 +28,38 @@
     <header id="header">
         <a href="/index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhou Ao' Photo" />
         </a>
-        <h1><strong>Zhou Ao | About</strong></h1>
+        <h1><strong>Zhou Ao | Search</strong></h1>
     </header>
 
     <!-- Main -->
     <div id="main">
         <!-- One -->
         <section id="one">
-            <!-- Search Icon -->
-            <div class="search">
-                <a href="/search" class="fa fa-search">Search</a>
-            </div>
             <header class="major">
-                <h2>About My Website</h2>
+                <h2>Search Zhou Ao's Blog</h2>
             </header>
-            <h3><p>This website is my personal space where I settle down to my ideas and put my projects in order.</p></h3>
-            <p>
-    I design and develop this site using 
-    <a href="http://jekyllrb.com/">
-        <img src="/images/jekyll-logo.png" width="100" height="30" alt="Jekyll • Transform your plain text into static websites and blogs">
-        </imag>
-    </a>, 
-    following these two styleguides, <a href="http://html5up.net/uploads/demos/aerial">Aerial</a> and <a href="http://html5up.net/uploads/demos/strata">Strate</a>.
-</p>
-
-<p>
-    Hosted by
-        <a href="https://github.com">
-            <img src="/images/github-logo.png" width="100" height="30" alt="GitHub • Social coding">
-        </a>.
-</p>
-
-<p>
-    Full-text search is supported by <a href="https://github.com/slashdotdash/jekyll-lunr-js-search">jekyll-lunr-js-search</a>.
-</p>
-
-<p>
-    Source available on <a href="https://github.com/Zhou-Ao/Zhou-Ao.github.io/">github</a>.
-</p>
-
-<p>
-    Unless specified otherwise, contents on this site is licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-</p>
-
-            <br />
-            <!-- Disqus Comments -->
-            <div id="disqus_thread"></div>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
+            <div id="search">
+                <form action="/search" method="get">
+                    <input type="text" id="search-query" name="q" placeholder="Keywords Here!" autocomplete="off">
+                </form>
+            </div>
+            <section id="search-results" style="display: none;">
+                <p>Search results</p>
+                <div class="entries">
+                </div>
+            </section>
+            
+            <script id="search-results-template" type="text/mustache">
+                {{#entries}}
+                <article>
+                    <h3>
+                        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+                        <a href="{{url}}">{{title}}</a>
+                    </h3>
+                </article>
+                {{/entries}}
+            </script>
+            
         </section>
     </div>
 
@@ -91,8 +75,9 @@
             <li><a href="/about" class="fa fa-cog">About</a>
             </li>
         </ul>
-        <br /><br /><br />
-        <ul class="copyright">
+        <br />
+        <br />
+        <br /> <ul class="copyright">
     <li>&copy; 2014 Zhou Ao.</li>
     <li>All contents under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC) BY-NC-SA license</a>, unless otherwise noted.
     </li>
@@ -170,6 +155,17 @@ $(document).ready(function() {
 <!-- Include jekyll-lunr-js-search -->
 <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    $(function() {
+        $('#search-query').lunrSearch({
+            indexUrl: '/search.json', // URL of the `search.json` index data for your site
+            results: '#search-results', // jQuery selector for the search results container
+            entries: '.entries', // jQuery selector for the element to contain the results list, must be a child of the results element above.
+            template: '#search-results-template' // jQuery selector for the Mustache.js template
+        });
+    });
+    </script>
 </body>
 
 </html>

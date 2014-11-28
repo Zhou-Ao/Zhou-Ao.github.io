@@ -12,3 +12,6 @@ highlighter: false
 markdown: redcarpet
 redcarpet:
   extensions: ["fenced_code_blocks", "with_toc_data", "no_intra_emphasis"]
+
+ #Enalble jekyll-lunr-js-search
+ # gems: ['jekyll-lunr-js-search']

@@ -1021,8 +1021,10 @@
 	}
 
 		#main .search {
-			position: relative;
+			position: absolute;
 			z-index: 1;
+			top: 10px !important;
+			right: 10px;
 		}
 
 		#main > section {
