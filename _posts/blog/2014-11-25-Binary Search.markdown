@@ -50,7 +50,8 @@ For $A_f(n)$, we can use the result of the worst-case analysis, because for unsu
 
 For $As(n)$, the thing is a little bit more complex. We have to find the number of comparisons for every possible case. It is easy to see that if the key is at the position of $n \over 2$, only 1 comparison is necessary to find the key. Also if the key is at the position of $n\over4$ or $3n \over 4$, with 2 comparisons we can find the key. And so on, if the key is located at $(2i-1){n \over 2^m}$ for $i=1,2...2^{m-1}$, m comparisons are needed.
 
-![Figure 1 Deduction of the Average Number of Comparisons in Successful Binary Search][1]
+![Figure 1: Deduction of the Average Number of Comparisons in Successful Binary Search](/images/binary_search.png "Figure 1: Deduction of the Average Number of Comparisons in Successful Binary Search")
+<center>Figure 1: Deduction of the Average Number of Comparisons in Successful Binary Search</center>
 
 For all the cases, the sum of the elements $1+2+3+...+2^{m-1}$ should be $n$. That is to say, ${1+2+4+...+2^{m-1}}={(1-2^{m})\over 1-2}=2^{m}-1=n=2^k-1$.
 
@@ -69,6 +70,3 @@ So after all,
 $$A_q(n)=q{log_2(n+1) \over n}-q+log_2(n+1).$$
 
 Through the analysis, we can draw the conclusion that the average case of binary search is $qO({log(n) \over n})-q+O(log(n)).$
-
-
-  [1]: /images/binary_search.png

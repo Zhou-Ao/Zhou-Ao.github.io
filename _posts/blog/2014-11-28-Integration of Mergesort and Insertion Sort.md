@@ -231,14 +231,14 @@ I did series of experiments to explore how modified mergesort improves on the ba
 
 ####1. Compare the number of key comparisons taken by modified mergesort and origin mergesort####
 
-![Curve of Modified Mergeort Key Comparisons vs. Array Size](/images/modified_mergesort_comparisons.png)
+![Curve of Modified Mergeort Key Comparisons vs. Array Size](/images/modified_mergesort_comparisons.png "Figure 1: Curve of Modified Mergesort Key Comparisons vs. Array Size")
 <center>Figure 1: Curve of Modified Mergesort Key Comparisons vs. Array Size</center>
 
 From Figure 1, we can obtain the relationship between the number of key
 comparisons and array size in modified mergesort. By curve fitting tool of
 Matlab, we find that the relationship function is mostly like $nlog(n)$.
 
-![Curve of Mergesort Key Comparisons vs. Array Size](/images/mergesort_comparisons.png)
+![Curve of Mergesort Key Comparisons vs. Array Size](/images/mergesort_comparisons.png "Figure 2: Curve of Mergesort Key Comparisons vs. Array Size")
 <center>Figure 2: Curve of Mergesort Key Comparisons vs. Array Size</center>
 
 From Figure 2, we can obtain the relationship between the number of key
@@ -253,14 +253,14 @@ key comparisons and array size is $f(n) = 1.333nlog(n)$.
 
 ####1. Compare the CPU time taken by modified mergesort and origin mergesort####
 
-![Curve of Modified Mergesort Time vs. Array Size](/images/modified_mergesort_time.png)
+![Curve of Modified Mergesort Time vs. Array Size](/images/modified_mergesort_time.png "Figure 3: Curve of Modified Mergesort Time vs. Array Size")
 <center>Figure 3: Curve of Modified Mergesort Time vs. Array Size</center>
 
 From Figure 3, we can obtain the relationship between CPU time and array
 size in modified mergesort. By curve fitting tool of Matlab, we find that the
 relationship function is mostly like $n$.
 
-![Curve of Mergesort Time vs. Array Size](/images/mergesort_time.png)
+![Curve of Mergesort Time vs. Array Size](/images/mergesort_time.png "Figure 4: Curve of Mergesort Time vs. Array Size")
 <center>Figure 4: Curve of Mergesort Time vs. Array Size</center>
 
 From Figure 4, we can obtain the relationship between CPU time and array
@@ -274,16 +274,16 @@ CPU time and array size is $f(t) = 0.0001928*t + -5.342$.
 
 ####2. Number of key comparisons and CPU time taken by Advanced Merge Sort on the data sets with different factors####
 
-![CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)](/images/table_comparisons_and_time.png)
+![CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)](/images/table_comparisons_and_time.png "Table 1: CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)")
 <center>Table 1: CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)</center>
 
-![Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)](/images/modified_mergesort_comparisons_fac.png)
+![Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)](/images/modified_mergesort_comparisons_fac.png "Figure 5: Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)")
 <center>Figure 5: Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)</center>
 
 From Figure 5, we can obtain the relationship between key comparisons and
 factor in modified mergesort. With factor increasing, we find it is difficult to gain the exact relationship function and the relationship is mostly like random distribution. For this result, two points can be taken into consideration. One is that we initialize the same-size array with random integers for each time conducting modified mergesort, so if the factor does not effect the number of comparisons, the number of comparisons would range in a small section. The other is that the performance of CPU is usually unstable. The speed of CPU is sometimes fast but at other times slow, so if the factor does not effect the number of comparisons, the number of comparisons would also range in a small section.
 
-![Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)](/images/modified_mergesort_time_fac.png)
+![Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)](/images/modified_mergesort_time_fac.png "Figure 6: Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)")
 <center>Figure 6: Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)</center>
 
 From Figure 6, we can obtain the relationship between CPU time and factor
