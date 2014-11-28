@@ -7,7 +7,7 @@ category: about
 <p>
     I design and develop this site using 
     <a href="http://jekyllrb.com/">
-        <img src="/images/jekyll-logo.png" width="100" height="30" alt="Jekyll • Transform your plain text into static websites and blogs">
+        <img src="/images/jekyll-logo.png" style="width: 100px" height="30" alt="Jekyll • Transform your plain text into static websites and blogs">
         </imag>
     </a>, 
     following these two styleguides, <a href="http://html5up.net/uploads/demos/aerial">Aerial</a> and <a href="http://html5up.net/uploads/demos/strata">Strate</a>.
@@ -15,7 +15,7 @@ category: about
 <p>
     Hosted by
         <a href="https://github.com">
-            <img src="/images/github-logo.png" width="100" height="30" alt="GitHub • Social coding">
+            <img src="/images/github-logo.png" style="width: 100px" height="30" alt="GitHub • Social coding">
         </a>.
 </p>
 <p>
