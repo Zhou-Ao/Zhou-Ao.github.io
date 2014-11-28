@@ -84,10 +84,7 @@
 </ul>
 
     </footer>
-    <!-- Include jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<!-- Include MathJax -->
+    <!-- Include MathJax -->
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
 </script>
@@ -110,23 +107,23 @@
 
 <!-- Include Google Gustom Search -->
 <script>
-(function() {
-    var cx = '014225321525856802214:jbtjtowm1d4';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-})();
+// (function() {
+//     var cx = '014225321525856802214:jbtjtowm1d4';
+//     var gcse = document.createElement('script');
+//     gcse.type = 'text/javascript';
+//     gcse.async = true;
+//     gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+//         '//www.google.com/cse/cse.js?cx=' + cx;
+//     var s = document.getElementsByTagName('script')[0];
+//     s.parentNode.insertBefore(gcse, s);
+// })();
 
-$(document).ready(function() {
-  var h = $(document).height();
-    $(".search").css('top', function(index,value){
-      return (60-h);
-    });
-});
+// $(document).ready(function() {
+//   var h = $(document).height();
+//     $(".search").css('top', function(index,value){
+//       return (60-h);
+//     });
+// });
 </script>
 
 <!-- Include Disqus -->
@@ -148,7 +145,7 @@ var disqus_shortname = 'zhouao'; // required: replace example with your forum sh
 <script type="text/javascript" src="/js/toc.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $(".toc").toc();
+    $('.toc').toc();
 });
 </script>
 

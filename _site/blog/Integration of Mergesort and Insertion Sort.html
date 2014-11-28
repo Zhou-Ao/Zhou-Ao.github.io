@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<!--
+    Modified by Zhou Ao based on HTML5 UP Strata.
+-->
+<html>
+
+<head>
+    <title>Blog | Zhou Ao</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Zhou Ao's Blog" />
+    <meta name="keywords" content="Zhou Ao, Blog, Tech, Developer, Programming, Physics, Peking University, Project" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <!-- Include jQuery -->
+    <script src="../js/blog/jquery.min.js"></script>
+    <script src="../js/blog/jquery.poptrox.min.js"></script>
+    <script src="../js/blog/skel.min.js"></script>
+    <script src="../js/blog/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/blogskel.css" />
+        <link rel="stylesheet" href="../css/blogstyle.css" />
+        <link rel="stylesheet" href="../css/blogstyle-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+    <!-- Google Prettify Code  -->
+<!-- This snippet must be included in the head -->
+<script type="text/javascript" src="/js/prettify/run_prettify.js"></script>
+<script type="text/javascript" src="/js/prettify/pre.js"></script>
+<link href="/js/prettify/sunburst.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body id="top">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhou Ao' Photo" />
+        </a>
+        <h1><strong>Zhou Ao's Blog</strong></h1>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- One -->
+        <section id="one">
+            <!-- Search Icon -->
+            <div class="search">
+                <a href="/search" class="fa fa-search">Search</a>
+            </div>
+            <header class="major">
+                <h2><a href="/blog/Integration%20of%20Mergesort%20and%20Insertion%20Sort.html">Integration of Mergesort and Insertion Sort</a></h2>
+            </header>
+            <p>Mergesort is faster than insertion sort, while whens the size of sub-arrays are small, the overhead of many recursive calls makes the algorithm inefficient. Integration of mergesort and insertion sort is a good way to develop advanced sort algorithm.</p>
+            <div class="date">
+                2014-11-28
+            </div>
+            <br />
+            <!-- Tree of Contents -->
+            <div class="toc"></div>
+            <div class="content">
+                <h2 id="introduction-to-mergesort-and-insertion-sort">Introduction to Mergesort and Insertion Sort</h2>
+
+<h3 id="insertion-sort">Insertion Sort</h3>
+
+<p>Insertion sort is a intuitive, primitive sorting method. Given a Given an unordered set of objects, the algorithm repeatedly removes an entry from the set and insert it into a new ordered list.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">void InsertionSort(ALIST slot[ ], int n)
+{   // input slot is an array of n records;
+    // assume n &gt; 1;
+    for (int i=1; i &lt; n; i++) {
+        for (int j=i; j &gt; 0; j--) {
+            if (slot[j].key &lt; slot[j-1].key)
+                swap(slot[j], slot[j-1]);
+            else break;
+        }
+    }
+}
+</code></pre></div>
+<p>The time complexity of insertion sort is in the order of <em>$n^2$</em>. Since sorting is performed directly on original array without any working storage, swapping and shifting which are time consuming are essential. So insertion sort is slow when a large size of array is going to be sorted. While for small-size arrays, insertion sort is still a simple and reliable algorithm.</p>
+
+<h3 id="mergesort">Mergesort</h3>
+
+<p>Mergesort is a useful sorting algorithm based on the idea of <strong>divide-and-conquer</strong>. For each iteration, the unsorted array is divided into two sub-arrays, and they are separately sorted. Then the two sorted sub-arrays merge together.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">void mergesort(int n, int m)
+{
+    int mid = (n+m)/2;
+    if (m-n &lt;= 0)
+        return;
+    else if (m-n &gt; 1) {
+        mergesort(n, mid);
+        mergesort(mid+1, m);
+    }
+    merge(n, m);
+}
+</code></pre></div>
+<p>The key point of mergesort is how <em>merge()</em> merges two sub-arrays of elements between index n and mid, and between mid+1 and m.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">void merge(int n, int m)
+{
+    if (m-n &lt;= 0) return;
+        divide the list into 2 halves; // both halves are sorted
+        while (both halves are not empty) {
+                compare the 1 st elements of the 2 halves; // 1 comparison
+            if (1 st element of 1st half is smaller)
+                1 st element of 1st half joins the end of the merged list;
+            else if (1 st element of 2nd half is smaller)
+                move the 1 st element of 2nd half to the end of the
+                merged list;
+            else { // the 1 st elements of the 2 halves are equal
+                if (they are the last elements) break;
+                1 st element of 1st half joins end of the merged list;
+                move the 1 st element of 2nd half to the end of the
+                merged list;
+            }
+        } // end of while loop;
+} // end of merge
+</code></pre></div>
+<p>The time complexity of mergesort is in the order of <em>$nlog(n)$</em>. But when the size of the array to be sorted is small, the the overhead of many recursive calls will make the algorithm inefficient.</p>
+
+<h2 id="integration-of-mergesort-and-insertion-sort">Integration of Mergesort and Insertion Sort</h2>
+
+<h3 id="modified-mergesort">Modified Mergesort</h3>
+
+<p>In oder to overcome the disadvantages of both mergesort and insertion sort, we can develop modified mergesort on the basis of integration of mergesort and insertion sort. This new algorithm can be achieved by choosing a small value of <em>fac</em> as a <strong>threshold</strong> for the size of sub-arrays. When the size of a
+sub-array in a recursive call is less than or equal to the value of <em>fac</em>, the algorithm will switch to insertion sort, which is efficient for small input. A pseudocode of the modified mergesort is given below:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">void mergeSort(Element E[], int first, int last, int fac)
+{
+    if (last – first &gt; S) {
+        int mid = (first + last)/2;
+        mergeSort(E, first, mid, S);
+        mergeSort(E, mid + 1, last, S);
+        merge(E, first, mid, last);
+    } else {
+        insertionSort(E, first, last);
+    }
+}
+</code></pre></div>
+<h3 id="implement-of-modified-mergesort">Implement of Modified Mergesort</h3>
+
+<blockquote>
+<p><em>Array.java</em>   <br />
+A class which consists of constructors, and methods such as InsertionSort( ), Merge( ), MergeSort( ), Sort( ) (which uses InsertionSort( ) to sort the sub-arrays with size &lt; factor).    <br />
+The number of comparisons are returned using the GetCounter( ) method, and the randomly generated data of array are returned using GetArray( ) method.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-java" data-lang="java">public class Array{                                                 //Array Class
+    private int n;                                                  //Class member size of Array
+    private int [] S;                                               //Class member data of Array
+    private long counter;                                           //Class member count comparisons
+    private int factor;
+
+    public Array(){                                                 //Default constructor
+        n = 0;
+        S = new int [n];
+        counter = 0;
+        factor = 0;
+    }
+
+    public Array(int size){                                         //Constructor with Initialization
+        n = size;
+        if(n &lt;= 0)
+            System.err.println(&quot;The input Array size is incorrect.&quot;);
+        else{
+            S = new int [n];
+            Random ran = new Random();
+            for(int i = 0; i &lt; n; i++){ 
+                S[i] = Math.abs(ran.nextInt());                     //Set random data to Array
+            }
+        }
+        counter = 0;
+        factor = 10;
+    }
+
+    public Array(int size, int fac){                                            //Constructor with Initialization
+        n = size;
+        if(n &lt;= 0)
+            System.err.println(&quot;The input Array size is incorrect.&quot;);
+        else{
+            S = new int [n];
+            Random ran = new Random();
+            for(int i = 0; i &lt; n; i++){ 
+                S[i] = Math.abs(ran.nextInt());                     //Set random data to Array
+            }
+        }
+        counter = 0;
+        factor = fac;
+    }
+
+    public Array(Array aArray){                                     //Copy constructor
+        this.n = aArray.n;
+        this.counter = aArray.counter;
+        this.factor = aArray.factor;
+        S = new int[aArray.n];
+        for(int i = 0; i &lt; aArray.n; i++){
+            this.S[i] = aArray.S[i];
+        }   
+    }
+
+    public void InsertionSort(int start, int last){                                     //Class methods
+        for (int i = start; i &lt;= last; i++){
+            for (int j = i; j &gt; start; j--) {
+                if (S[j] &lt; S[j-1]){
+                    counter++;
+                    int tmp = S[j];
+                    S[j] = S[j-1];
+                    S[j-1] = tmp;
+                    }
+                else break;
+            }
+        }
+    }
+    private void Merge(int start, int end){                         //Class methods, used in MergeSort
+        int mid = (start + end) / 2;
+        int a = start, b = mid + 1, index = 0;
+        int[] tmpArray = new int[end - start + 1];
+
+        while(a &lt;= mid &amp;&amp; b &lt;= end){
+            if(S[a] &lt;= S[b]){
+                tmpArray[index++] = S[a];
+                a++;
+            }
+            else{
+                tmpArray[index++] = S[b];
+                b++;
+            }
+            counter++;
+        }
+        while(a &lt;= mid){
+            tmpArray[index++] = S[a++];
+        }
+        while(b &lt;= end){
+            tmpArray[index++] = S[b++];
+        }
+        for(int i = start; i &lt;= end; i++){
+            S[i] = tmpArray[i - start];
+        }
+    }
+    public void MergeSort(int start, int end){                      //Class methods MergeSort
+        if(end - start &lt;= 0)
+            return;
+        else if(end - start &gt; 1){
+            int mid=(start+end)/2;
+            MergeSort(start,mid);
+            MergeSort(mid+1,end);
+        }
+        Merge(start,end);
+    }
+
+    public void Sort(int first, int last){                                              //Class methods Sort
+        if(last - first &gt; factor){
+            int mid = (first + last)/ 2;
+            Sort(first, mid);
+            Sort(mid + 1, last);
+            Merge(first, last);
+        }
+        else{
+            InsertionSort(first, last);
+        }
+    }
+
+    public long GetCounter(){                                       //Class methods, get number of comparisons
+        return(counter);
+    }
+
+    public int[] GetArray(){                                            //Class methods, get data of Array
+        int[] tmp = new int[n];
+        for(int i = 0; i &lt; n; i++){
+            tmp[i] = S[i];
+        }
+        return(tmp);
+    }
+}
+</code></pre></div>
+<h3 id="experiment-on-modified-mergesort">Experiment on Modified Mergesort</h3>
+
+<p>I did series of experiments to explore how modified mergesort improves on the basis of mergesort by generating input data sets of various sizes, randomly ranging from 1,000 to 1,000,000 integers to see the number of key comparisons and CPU times taken by modified mergesort compared with origin mergesort. And I also studied how how the different values of S would affect the performance of the modified algorithm.</p>
+
+<h4 id="1.-compare-the-number-of-key-comparisons-taken-by-modified-mergesort-and-origin-mergesort">1. Compare the number of key comparisons taken by modified mergesort and origin mergesort</h4>
+
+<p><img src="/images/modified_mergesort_comparisons.png" alt="Curve of Modified Mergeort Key Comparisons vs. Array Size">
+<center>Figure 1: Curve of Modified Mergesort Key Comparisons vs. Array Size</center></p>
+
+<p>From Figure 1, we can obtain the relationship between the number of key
+comparisons and array size in modified mergesort. By curve fitting tool of
+Matlab, we find that the relationship function is mostly like $nlog(n)$.</p>
+
+<p><img src="/images/mergesort_comparisons.png" alt="Curve of Mergesort Key Comparisons vs. Array Size">
+<center>Figure 2: Curve of Mergesort Key Comparisons vs. Array Size</center></p>
+
+<p>From Figure 2, we can obtain the relationship between the number of key
+comparisons and array size in mergesort. By curve fitting tool of Matlab, we find that the relationship function is mostly like $nlog(n)$.</p>
+
+<p>Through analysis, the relationship between key comparisons and array size in
+modified mergesort is $nlog(n)$. Although it is the same in Merge Sort, when
+compare the exact number of key comparisons with same array size in Advanced
+Merge Sort and Merge Sort, Advanced Merge Sort conducts fewer comparisons.
+By curve fitting, we obtain the mathematical relationship function between
+key comparisons and array size is $f(n) = 1.333nlog(n)$.</p>
+
+<h4 id="1.-compare-the-cpu-time-taken-by-modified-mergesort-and-origin-mergesort">1. Compare the CPU time taken by modified mergesort and origin mergesort</h4>
+
+<p><img src="/images/modified_mergesort_time.png" alt="Curve of Modified Mergesort Time vs. Array Size">
+<center>Figure 3: Curve of Modified Mergesort Time vs. Array Size</center></p>
+
+<p>From Figure 3, we can obtain the relationship between CPU time and array
+size in modified mergesort. By curve fitting tool of Matlab, we find that the
+relationship function is mostly like $n$.</p>
+
+<p><img src="/images/mergesort_time.png" alt="Curve of Mergesort Time vs. Array Size">
+<center>Figure 4: Curve of Mergesort Time vs. Array Size</center></p>
+
+<p>From Figure 4, we can obtain the relationship between CPU time and array
+size in mergesort. By curve fitting tool of Matlab, we find that the
+relationship function is mostly like $n$.</p>
+
+<p>Through analysis, the relationship between key comparisons and array size in
+modified mergesort is $n^2$ . Although it is the same as mergesort, when comparing the exact number of key comparisons with same array size in modified mergesort and mergesort, modified mergesort conducts fewer comparisons.
+By curve fitting, we obtain the mathematical relationship function between
+CPU time and array size is $f(t) = 0.0001928*t + -5.342$.</p>
+
+<h4 id="2.-number-of-key-comparisons-and-cpu-time-taken-by-advanced-merge-sort-on-the-data-sets-with-different-factors">2. Number of key comparisons and CPU time taken by Advanced Merge Sort on the data sets with different factors</h4>
+
+<p><img src="/images/table_comparisons_and_time.png" alt="CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)">
+<center>Table 1: CPU Time and Key Comparisons of Modified Mergesort with Different Factor (ArraySize = 10000)</center></p>
+
+<p><img src="/images/modified_mergesort_comparisons_fac.png" alt="Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)">
+<center>Figure 5: Curve of Modified Mergesort Key Comparisons vs. Factor (ArraySize = 10000)</center></p>
+
+<p>From Figure 5, we can obtain the relationship between key comparisons and
+factor in modified mergesort. With factor increasing, we find it is difficult to gain the exact relationship function and the relationship is mostly like random distribution. For this result, two points can be taken into consideration. One is that we initialize the same-size array with random integers for each time conducting modified mergesort, so if the factor does not effect the number of comparisons, the number of comparisons would range in a small section. The other is that the performance of CPU is usually unstable. The speed of CPU is sometimes fast but at other times slow, so if the factor does not effect the number of comparisons, the number of comparisons would also range in a small section.</p>
+
+<p><img src="/images/modified_mergesort_time_fac.png" alt="Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)">
+<center>Figure 6: Curve of Modified Mergesort Time vs. Factor (ArraySize = 10000)</center></p>
+
+<p>From Figure 6, we can obtain the relationship between CPU time and factor
+in modified mergesort. With factor increasing, the CPU time dramatically
+deceases, but when factor increasing to 10, the CPU time stay in a small range.</p>
+
+<p>It is remarkable to find there is a huge difference between the relationship of
+key comparison number and factor and the relationship of CPU time and factor.
+We consider that although with different factors the number of comparisons is
+almost the same, the operation time may not be the same when the time of other
+operations such as swap and assignment is taken into consideration, due to the
+different procedure of mergesort and insertion Sort.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<h4 id="1.-the-improvement-of-modified-mergesort">1. The improvement of Modified MergeSort</h4>
+
+<p>As for key comparisons, the improvement of the modified mergesort is</p>
+
+<p>$$ {1.35-1.333 \over 1.35} = 0.0126 $$</p>
+
+<p>, which is not very significant.</p>
+
+<p>But as for CPU time, the improvement of the modified mergesort is</p>
+
+<p>$$ {0.000245-0.0001928 \over 0.000245} = 0.213 $$</p>
+
+<p>, which is very impressive.</p>
+
+<h4 id="2.-the-effect-of-different-values-of-factor">2. The effect of different values of factor</h4>
+
+<p>From the results, the factor have little effect on the number of key
+comparison conducted in modified mergesort, but it does reduce the CPU time
+especially when the factor is over 10.</p>
+
+            </div>
+            <br />
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="/blog" class="fa fa-home">Blog</a>
+            </li>
+            <li><a href="/project" class="fa fa-pencil">Project</a>
+            </li>
+            <li><a href="/me" class="fa fa-book">Me</a>
+            </li>
+            <li><a href="/about" class="fa fa-cog">About</a>
+            </li>
+        </ul>
+        <br /><br /><br />
+        <ul class="copyright">
+    <li>&copy; 2014 Zhou Ao.</li>
+    <li>All contents under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC) BY-NC-SA license</a>, unless otherwise noted.
+    </li>
+</ul>
+
+    </footer>
+    <!-- Include MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- Include Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57134466-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+  // ga(‘set’, ‘&uid’, ); // use user_id logged in to set up ID。
+</script>
+
+<!-- Include Google Gustom Search -->
+<script>
+// (function() {
+//     var cx = '014225321525856802214:jbtjtowm1d4';
+//     var gcse = document.createElement('script');
+//     gcse.type = 'text/javascript';
+//     gcse.async = true;
+//     gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+//         '//www.google.com/cse/cse.js?cx=' + cx;
+//     var s = document.getElementsByTagName('script')[0];
+//     s.parentNode.insertBefore(gcse, s);
+// })();
+
+// $(document).ready(function() {
+//   var h = $(document).height();
+//     $(".search").css('top', function(index,value){
+//       return (60-h);
+//     });
+// });
+</script>
+
+<!-- Include Disqus -->
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'zhouao'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+<!-- Include Tree of Content -->
+<script type="text/javascript" src="/js/toc.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.toc').toc();
+});
+</script>
+
+<!-- Include jekyll-lunr-js-search -->
+<script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
