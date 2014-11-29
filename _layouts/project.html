@@ -53,10 +53,28 @@
                 {{ content }}
             </div>
             <br />
-            <!-- Disqus Comments -->
-            <div id="disqus_thread"></div>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
+            <!-- Navigator -->
+            <div class="previous_next">
+                {% for post in site.categories.project %}
+                    {% if forloop.last == true and post.id != page.id %}
+                    <a href="{{ site.categories.project[forloop.index0].url }}" title="First post" class="fa fa-fast-backward"></a>
+                    &nbsp;&nbsp;
+                    {% endif %}
+                {% endfor %}
+                {% for post in site.categories.project %}
+                    {% if post.id == page.id  and forloop.last == false %}
+                    <a href="{{ site.categories.project[forloop.index].url }}" title="Previous post" class="fa fa-backward"></a>
+                    {% endif %}
+                {% endfor %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% for post in site.categories.project %}
+                    {% if site.categories.project[forloop.index].id == page.id  and forloop.last == false %}
+                    <a href="{{ site.categories.project[forloop.index0].url }}" title="Next post" class="fa fa-forward"></a>
+                    &nbsp;&nbsp;
+                    <a href="{{ site.categories.project[0].url }}" title="Last post" class="fa fa-fast-forward"></a>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </section>
     </div>
 
