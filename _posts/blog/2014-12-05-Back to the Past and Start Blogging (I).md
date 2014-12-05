@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Back to the Past, and Start Blogging (I)
+title: Back to the Past and Start Blogging (I)
 description: Step-by-step instructions to establish a blog website hosted by Github Pages and using Jekyll with functional tools, such as code highlight, mathematic expressions rendering and full-text search.
 category: blog
 ---
@@ -15,7 +15,7 @@ After getting everything ready in my website, I would like to share what I did t
 - Learn how to use Jekyll
 - Web pages design
 - Set up Tree of Contents
-- Set up Mathjax
+- Set up MathJax
 - Set up full-text search
 
 ##Domain Registration##
