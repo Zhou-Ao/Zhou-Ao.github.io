@@ -57,7 +57,20 @@ pre .dec, code .dec {
 }
 /* decimal - blue */
 
+/* normal code*/
+code {
+    background-color: #000;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+}
+
 pre.prettyprint, code.prettyprint {
+
     background-color: #000;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;

@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(II).html</loc>
+    
+    <lastmod>2014-12-06T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(I).html</loc>
     
     <lastmod>2014-12-05T00:00:00+08:00</lastmod>
@@ -61,49 +69,49 @@
   
   <url>
     <loc>/404.html</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>/search/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>/me/</loc>
-    <lastmod>2014-12-05T23:49:23+08:00</lastmod>
+    <lastmod>2014-12-06T18:53:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

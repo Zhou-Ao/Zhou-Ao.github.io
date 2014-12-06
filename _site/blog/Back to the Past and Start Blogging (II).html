@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<!--
+    Modified by Zhou Ao based on HTML5 UP Strata.
+-->
+<html>
+
+<head>
+    <title>Blog | Zhou Ao</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Zhou Ao's Blog" />
+    <meta name="keywords" content="Zhou Ao, Blog, Tech, Developer, Programming, Physics, Peking University, Project" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <!-- Include jQuery -->
+    <script src="../js/blog/jquery.min.js"></script>
+    <script src="../js/blog/jquery.poptrox.min.js"></script>
+    <script src="../js/blog/skel.min.js"></script>
+    <script src="../js/blog/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/blogskel.css" />
+        <link rel="stylesheet" href="../css/blogstyle.css" />
+        <link rel="stylesheet" href="../css/blogstyle-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+
+    <!-- Include MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- Include Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57134466-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+  // ga(‘set’, ‘&uid’, ); // use user_id logged in to set up ID。
+</script>
+
+<!-- Include jekyll-lunr-js-search -->
+<script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<!-- Google Prettify Code  -->
+<!-- This snippet must be included in the head -->
+<script type="text/javascript" src="/js/prettify/run_prettify.js"></script>
+<script type="text/javascript" src="/js/prettify/pre.js"></script>
+<link href="/js/prettify/sunburst.css" type="text/css" rel="stylesheet" />
+
+<!-- Include Icon -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<!-- Include Tree of Content -->
+<script type="text/javascript" src="/js/toc.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.toc').toc();
+    });
+</script>
+<!-- Include Disqus -->
+<script type="text/javascript" src="/js/disqus.js"></script>
+
+</head>
+
+<body id="top">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhou Ao' Photo" />
+        </a>
+        <h1><strong>Zhou Ao's Blog</strong></h1>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- One -->
+        <section id="one">
+            <!-- Search Icon -->
+            <div class="search">
+                <a href="/search" class="fa fa-search">Search</a>
+            </div>
+            <header class="major">
+                <h2><a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(II).html">Back to the Past and Start Blogging (II)</a></h2>
+            </header>
+            <p>Step-by-step instructions to establish a blog website hosted by Github Pages and using Jekyll with functional tools, such as code highlight, mathematic expressions rendering and full-text search.</p>
+            <div class="date">
+                2014-12-06
+            </div>
+            <br />
+            <!-- Tree of Contents -->
+            <div class="toc"></div>
+            <div class="content">
+                <p>The age for blog has already passed. Instead, it is the world of Facebook, Twitter, and Instagram. More and more people prefer to update a short status in a minute, rather than to spend couple of hours sitting down to write a paragraph. However, I still desire to have my own place on the Internet, neither a social media homepage, nor a community account, but a true home made by my own hand.</p>
+
+<p>After getting everything ready in my website, I would like to share what I did to establish my website.</p>
+
+<h2 id="things-to-be-done">Things to Be Done</h2>
+
+<ul>
+<li>Register a domain</li>
+<li>Set up Github and Github Pages</li>
+<li>Learn how to use Jekyll</li>
+<li>Web pages design</li>
+<li>Set up Tree of Contents</li>
+<li>Set up MathJax</li>
+<li>Set up full-text search</li>
+</ul>
+
+<h2 id="to-power-your-website-with-jekyll">To Power Your Website with Jekyll</h2>
+
+<p>Besides regular HTML contents, Github Pages support <a href="http://jekyllrb.com/"><strong>Jekyll</strong></a>, which makes it much less painful to establish your website. Github Pages also has an official <a href="https://help.github.com/articles/using-jekyll-with-pages/"><strong>document</strong></a> to introduce how to use Jekyll with Github Pages.</p>
+
+<blockquote>
+<p>In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog-aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page.
+--- Github Pages</p>
+
+<p>Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
+--- Jekyll</p>
+</blockquote>
+
+<h3 id="installation-of-jekyll">Installation of Jekyll</h3>
+
+<p>First, you should install Jekyll on your computer. Since Jekyll is written in <a href="https://www.ruby-lang.org/en/"><strong>Ruby</strong></a>, a dynamic, open source programming language, the installation of Ruby is required before you get started to install Jekyll.</p>
+
+<p>For Mac OS user, you have probably already got Ruby. To check with this, you can open the Terminal application, and run command <code>ruby --version</code>. If you can see your Ruby version begin with <code>1.9.3</code> or <code>2.0.0</code>, you have got Ruby with supported version. If not, you should refer to <a href="https://www.ruby-lang.org/en/downloads/"><strong>these instructions</strong></a> to install Ruby.</p>
+
+<p>For Windows user, you can use <a href="http://rubyinstaller.org/"><strong>RubyInstaller</strong></a> to install Ruby on Windows. </p>
+
+<p>After installing Ruby, you are supposed to install <a href="http://bundler.io/"><strong>Bundler</strong></a>. It is a package manager that makes versioning Ruby software like Jekyll a lot easier. To install it, you can just run the command <code>gem install bundler</code>.</p>
+
+<p>Last, here comes the main event, installation of Jekyll. You are require to create a file in you site&#39;s repository called <code>Gemfile</code> (note: no any filename extension). Here is an example for the contents in <code>Gemfile</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">source 'https://rubygems.org'
+gem 'github-pages'
+</code></pre></div>
+<p>After that, you can run the command <code>bundle install</code> and then you&#39;re ready.</p>
+
+<p>However, during the command <code>bundle install</code>, I encountered error as following.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">An error occured while installing pg (0.13.2), and Bundler cannot continue.
+Make sure that `gem install pg -v '0.13.2'` succeeds before bundling.
+</code></pre></div>
+<p>In the beginning, I manually run the commands like <code>gem install pg -v &#39;0.13.2&#39;</code> for every error message showed up. But it is really a wait of time to do it over and over again. Finally, I found that the errors occurred only because my <code>RubyGems</code> is not up to date. To upgrade to the latest RubyGems, I ran the command <code>gem update --system</code>, and it fixed all the problems.</p>
+
+<p>For Windows user, you can also refer to the instructions to get <a href="http://jekyll-windows.juthilo.com/"><strong>Jekyll running on Windows</strong></a> written by Julian Thilo, which seem to work for most.</p>
+
+<p>To run Jekyll, just use the command <code>bundle exec jekyll serve</code> in the root of you repository, and your site can be previewed at <code>http://localhost:4000</code> before you push to Github.</p>
+
+<h3 id="jekyll-basics">Jekyll Basics</h3>
+
+<p>Jekyll has very substantial <a href="http://jekyllrb.com/docs/home/"><strong>documents</strong></a> for how to use Jekyll to build website. Although they are not very easy easy to understand and lack of vivid examples, I still highly recommend to go through it.</p>
+
+<blockquote>
+<p>Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written in your favorite markup language, be that <strong>Markdown</strong>, <strong>Textile</strong>, or just plain <strong>HTML</strong>, and it churns that through a layout or series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more. This is all done through editing text files, and the static web site is the final product.
+``` Jekyll</p>
+</blockquote>
+
+<p>A basic structure of Jekyll site looks like this:
+<pre><code class="language-bash" data-lang="bash">.
+├── _config.yml
+├── _includes
+<span class="p">|</span>   ├── footer.html
+<span class="p">|</span>   └── header.html
+├── _layouts
+<span class="p">|</span>   ├── default.html
+<span class="p">|</span>   └── post.html
+├── _posts
+<span class="p">|</span>   ├── 2007-10-29-why-every-programmer-should-play-nethack.markdown
+<span class="p">|</span>   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _site
+└── index.html</code></pre></p>
+
+<h4 id="_config.yml">_config.yml</h4>
+
+<p>It stores configuration data. The details of the configuration can refer to <a href="http://jekyllrb.com/docs/configuration/"><strong>the configuration document</strong></a>.</p>
+
+<p>Among all the configuration, I would like to talk about Markdown options. Jekyll supports various Markdown renderers. The default one is kramdown. However other renderers can provide more useful extra extensions which will significantly enhance the writing experience. <a href="https://github.com/vmg/redcarpet"><strong>Redcarpet</strong></a> is one of the excellent Markdown renderer.</p>
+
+<p>To use Redcarpet, you should first install it as a Gem. You can simply run the command <code>gem install redcarpet</code> to install Redcarpet.</p>
+
+<p>To enable Redcarpet in Jekyll, the configuration file should be modified.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#Enalbe Redcarpet
+markdown: redcarpet
+</code></pre></div>
+<p>According to the README of Redcarpet, there are various useful extensions. They can be configured by providing an <code>extensions</code> sub-setting of Redcarpet. For me, I enabled <code>fenced_code_blocks</code>, <code>with_toc_data</code> and <code>no_intra_emphasis</code>.</p>
+
+<ul>
+<li><code>fenced_code_blocks</code> parse fenced code blocks, PHP-Markdown style. Blocks delimited with 3 or more ~ or backticks will be considered as code, without the need to be indented. An optional language name may be added at the end of the opening fence for the code block.
+With this extension enabled, you can just insert a piece of code in Mardown file using the following syntax.</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">```ruby
+#...ruby code 
+    ```
+</code></pre></div>
+<ul>
+<li><p><code>with_toc_data</code> add HTML anchors to each header in the output HTML, to allow linking to each section.
+Together with <a href="https://github.com/ghiculescu/jekyll-table-of-contents"><strong>jekyll-table-of-contents</strong></a>, it can help to generator table of contents for blogs. I will introduce how to use jekyll-table-of-contents in my next blog.</p></li>
+<li><p><code>no_intra_emphasis</code> do not parse emphasis inside of words. Strings such as foo_bar_baz will not generate <code>&lt;em&gt;</code> tags.
+It help to solve the conflicts between MahtJax and Redcarpet. I will introduce how to enable MathJax with Jekyll in my next blog.</p></li>
+</ul>
+
+<h4 id="_layouts">_layouts</h4>
+
+<p>In this directory, there are the templates for the posts. You can specify which template to use for a post in the <a href="http://jekyllrb.com/docs/frontmatter/"><strong>YAML Front Matter</strong></a>. In the templates, you can design what your blog website looks like, and insert the liquid tag <code>{{ content }}</code> to inject content for your posts. Separating the web page design and blog contents, this is exactly the reason why Jekyll make it convenient to build websites.</p>
+
+<h4 id="_posts">_posts</h4>
+
+<p>There is the area where you put your blogs. You can use Markdown to write your blog, and Jekyll will interpret it by you Markdown renderer. The name of your blogs mush strictly follow the format: <code>YEAR-MONTH-DAY-title.MARKUP</code>. Once the file name is set, the date and markup language for the post are determined.</p>
+
+<p>Every post should start with a <a href="http://jekyllrb.com/docs/frontmatter/"><strong>YAML Front Matter</strong></a>. Jekyll will process all the files that contain YAML front matters.</p>
+
+<blockquote>
+<p>Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using Liquid tags both further down in the file and also in any layouts or includes that the page or post in question relies on.
+``` Jekyll</p>
+</blockquote>
+
+<p>Here is the the front matter I used for this blog:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
+layout: blog
+title: Back to the Past and Start Blogging (II)
+description: Step-by-step instructions to establish a blog website hosted by Github Pages and using Jekyll with functional tools, such as code highlight, mathematic expressions rendering and full-text search.
+category: blog
+---
+</code></pre></div>
+<p>You can also custom <a href="http://jekyllrb.com/docs/permalinks/"><strong>permalink</strong></a> for you posts. The default permalink is defined as <code>/:categories/:year/:month/:day/:title.html</code>. And you can custom it by changing the permalink option in the configuration file.</p>
+
+<h4 id="_includes">_includes</h4>
+
+<p>You can put files under this directory, and then use the liquid tag <code>{% include file.ext %}</code> to include them in files in <code>_layouts</code> or any other file started with the YAML front matter.</p>
+
+<h3 id="liquid">Liquid</h3>
+
+<p>Another thing make Jekyll powerful is that it supports <a href="https://github.com/Shopify/liquid/wiki"><strong>Liquid</strong></a> converter. The document <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"><strong>Liquid for Designers</strong></a> shows roughly how to use Liquid. For more complete introductions, you can refer to the <a href="http://docs.shopify.com/themes/liquid-documentation/basics"><strong>documentation</strong></a> on <a href="https://www.shopify.com"><strong>Shopify</strong></a>.</p>
+
+<p>I can show you some example how I use Liquid in my website.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+{% for post in site.categories.blog %}
+        &lt;section id=&quot;one&quot;&gt;
+            &lt;header class=&quot;major&quot;&gt;
+                &lt;h2&gt;&lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/h2&gt;
+            &lt;/header&gt;
+            &lt;p&gt;{{ post.description }}&lt;/p&gt;
+            &lt;div class=&quot;date&quot;&gt;
+                {{ post.date|date:&quot;%F&quot; }}
+            &lt;/div&gt;
+        &lt;/section&gt;
+        {% endfor %}
+
+</code></pre></div>
+<p>This piece of code is extracted from the index for my blog. By Liquid, I generated a list of my blogs.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+&lt;!-- Navigator --&gt;
+            &lt;div class=&quot;previous_next&quot;&gt;
+                {% for post in site.categories.blog %}
+                    {% if forloop.last == true and post.id != page.id %}
+                    &lt;a href=&quot;{{ site.categories.blog[forloop.index0].url }}&quot; title=&quot;First post&quot; class=&quot;fa fa-fast-backward&quot;&gt;&lt;/a&gt;
+                    &amp;nbsp;&amp;nbsp;
+                    {% endif %}
+                {% endfor %}
+                {% for post in site.categories.blog %}
+                    {% if post.id == page.id  and forloop.last == false %}
+                    &lt;a href=&quot;{{ site.categories.blog[forloop.index].url }}&quot; title=&quot;Previous post&quot; class=&quot;fa fa-backward&quot;&gt;&lt;/a&gt;
+                    {% endif %}
+                {% endfor %}
+                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+                {% for post in site.categories.blog %}
+                    {% if site.categories.blog[forloop.index].id == page.id  and forloop.last == false %}
+                    &lt;a href=&quot;{{ site.categories.blog[forloop.index0].url }}&quot; title=&quot;Next post&quot; class=&quot;fa fa-forward&quot;&gt;&lt;/a&gt;
+                    &amp;nbsp;&amp;nbsp;
+                    &lt;a href=&quot;{{ site.categories.blog[0].url }}&quot; title=&quot;Last post&quot; class=&quot;fa fa-fast-forward&quot;&gt;&lt;/a&gt;
+                    {% endif %}
+                {% endfor %}
+            &lt;/div&gt;
+
+</code></pre></div>
+<p>This piece of code is extracted from the template in <code>_includes</code> for my blog. By Liquid, I managed to create the navigation button at the end of each blog.</p>
+
+<p>It is usually very easy to implement it use the predefined variables <code>page.next</code> and <code>page.previous</code>. But for me, it is different. As you can see, I have two categories of posts, blog and project. However, Jekyll put all my posts in the array <code>site.posts</code> in time order regardless of the category. That means if I directly use <code>page.next</code> or <code>page.previous</code>, the variable will return the next or previous post which may be a project post rather than a blog post. Fortunately, Liquid help me to solve this problem with for loop and if statement.</p>
+
+            </div>
+            <br />
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+            <div class="backtotop">
+                <a href="#" class="fa fa-arrow-circle-up">Top</a>
+            </div>
+            <!-- Navigator -->
+            <div class="previous_next">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                    <a href="/blog/Hacker%20on%20the%20Way.html" title="First post" class="fa fa-fast-backward"></a>
+                    &nbsp;&nbsp;
+                    
+                
+                
+                    
+                    <a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(I).html" title="Previous post" class="fa fa-backward"></a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="/blog" class="fa fa-home">Blog</a>
+            </li>
+            <li><a href="/project" class="fa fa-pencil">Project</a>
+            </li>
+            <li><a href="/me" class="fa fa-book">Me</a>
+            </li>
+            <li><a href="/about" class="fa fa-cog">About</a>
+            </li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <ul class="copyright">
+    <li>&copy; 2014 Zhou Ao.</li>
+    <li>All contents under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC) BY-NC-SA license</a>, unless otherwise noted.
+    </li>
+</ul>
+
+    </footer>
+</body>
+
+</html>
