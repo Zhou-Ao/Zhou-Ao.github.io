@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<!--
+    Modified by Zhou Ao based on HTML5 UP Strata.
+-->
+<html>
+
+<head>
+    <title>Blog | Zhou Ao</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Zhou Ao's Blog" />
+    <meta name="keywords" content="Zhou Ao, Blog, Tech, Developer, Programming, Physics, Peking University, Project" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <!-- Include jQuery -->
+    <script src="../js/blog/jquery.min.js"></script>
+    <script src="../js/blog/jquery.poptrox.min.js"></script>
+    <script src="../js/blog/skel.min.js"></script>
+    <script src="../js/blog/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/blogskel.css" />
+        <link rel="stylesheet" href="../css/blogstyle.css" />
+        <link rel="stylesheet" href="../css/blogstyle-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+
+    <!-- Include MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- Include Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57134466-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+  // ga(‘set’, ‘&uid’, ); // use user_id logged in to set up ID。
+</script>
+
+<!-- Include jekyll-lunr-js-search -->
+<script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<!-- Google Prettify Code  -->
+<!-- This snippet must be included in the head -->
+<script type="text/javascript" src="/js/prettify/run_prettify.js"></script>
+<script type="text/javascript" src="/js/prettify/pre.js"></script>
+<link href="/js/prettify/sunburst.css" type="text/css" rel="stylesheet" />
+
+<!-- Include Icon -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<!-- Include Table of Content -->
+<script type="text/javascript" src="/js/toc.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.toc').toc();
+    });
+</script>
+<!-- Include Disqus -->
+<script type="text/javascript" src="/js/disqus.js"></script>
+
+</head>
+
+<body id="top">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/index.html" class="image avatar"><img src="../images/avatar.jpg" alt="Zhou Ao' Photo" />
+        </a>
+        <h1><strong>Zhou Ao's Blog</strong></h1>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- One -->
+        <section id="one">
+            <!-- Search Icon -->
+            <div class="search">
+                <a href="/search" class="fa fa-search">Search</a>
+            </div>
+            <header class="major">
+                <h2><a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(III).html">Back to the Past and Start Blogging (III)</a></h2>
+            </header>
+            <p>Step-by-step instructions to establish a blog website hosted by Github Pages and using Jekyll with functional tools, such as code highlight, mathematic expressions rendering and full-text search.</p>
+            <div class="date">
+                2014-12-07
+            </div>
+            <br />
+            <!-- Tree of Contents -->
+            <div class="toc"></div>
+            <div class="content">
+                <p>The age for blog has already passed. Instead, it is the world of Facebook, Twitter, and Instagram. More and more people prefer to update a short status in a minute, rather than to spend couple of hours sitting down to write a paragraph. However, I still desire to have my own place on the Internet, neither a social media homepage, nor a community account, but a true home made by my own hand.</p>
+
+<p>After getting everything ready in my website, I would like to share what I did to establish my website.</p>
+
+<h2 id="things-to-be-done">Things to Be Done</h2>
+
+<ul>
+<li>Register a domain</li>
+<li>Set up Github and Github Pages</li>
+<li>Learn how to use Jekyll</li>
+<li>Web pages design</li>
+<li>Set up Table of Contents</li>
+<li>Set up Google Code Prettify</li>
+<li>Set up MathJax</li>
+<li>Set up full-text search</li>
+</ul>
+
+<h3 id="design-your-website-with-a-beautiful-template">Design Your Website with a Beautiful Template</h3>
+
+<p>Font-end design is never easy. It is extremely time consuming to design a pretty website from the beginning to the end. However, thanks for the well designed open-source templates and font-end development tools, things get much easy.</p>
+
+<p>My Criteria for website template are as following:</p>
+
+<ul>
+<li>Appearance: simple and elegant design;</li>
+<li>Compatibility: functional in all platforms;</li>
+<li>Stabilization: coded by HTML5 and CSS3;</li>
+<li>Customizability: easy to reproduce.</li>
+</ul>
+
+<p><a href="http://html5up.net/"><strong>HTML5 Up</strong></a> is a great place to get free website templates. And also <a href="http://pixelarity.com/"><strong>Pixelarity</strong></a> provides more commercial templates. The templates of both HTML5 Up and Pixelarity are developed based on the framework <a href="http://getskel.com/"><strong>Skel</strong></a>.</p>
+
+<blockquote>
+<p>Skel is a lightweight, low-level framework for building responsive sites and web apps. Inspired in part by its namesake (/etc/skel), it&#39;s designed to do just enough to make building responsively simpler, faster, and more effective, but not so much it gets in your way.
+--- Skel Document</p>
+</blockquote>
+
+<p>For me, I chose the template <a href="http://html5up.net/uploads/demos/aerial"><strong>Aerial</strong></a> to create my home page and <a href="http://html5up.net/uploads/demos/strata"><strong>Strata</strong></a> for the other pages.</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<p>A table of contents of every blog is very necessary for readers to know what you are talking about and to quickly get to the right place. As you can see, I formed a table of contents for all my blogs by <a href="https://github.com/ghiculescu/jekyll-table-of-contents"><strong>jekyll-table-of-contents</strong></a>, a simple JavaScript table of contents generator.</p>
+
+<p>Follow the instructions on the Github site, and there is no much trouble to deal with it.</p>
+
+<h3 id="google-code-prettify">Google Code Prettify</h3>
+
+<p>Among all the code highlight tools, <a href="https://code.google.com/p/google-code-prettify/"><strong>Google Code Prettify</strong></a> is most easy to use and support almost the programming languages.</p>
+
+<p>You can just include the JavaScript and CSS provided by Google and write code snippets as the following format. And then, you can see you code is pretty printed.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"> &lt;pre class=&quot;prettyprint&quot;&gt;...&lt;/pre&gt;
+ # Or
+ &lt;code class=&quot;prettyprint&quot;&gt;...&lt;/code&gt;
+</code></pre></div>
+<p>I recommend you to disable the highlighter setting of Jekyll, by just adding one line in the configuration file to avoid conflicts between Jekyll and Google Code Prettify.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">highlighter: false
+</code></pre></div>
+<p>You can also include to following script in you HTML template to automatically add class attribute to tag <code>&lt;pre&gt;</code>, when editing your code by Markdown.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function(){
+    // Add the class of pre requried by Google Code Prettify
+    $('pre').addClass('prettyprint linenums');
+});
+&lt;/script&gt;
+</code></pre></div>
+<p>Another thing you should pay attention to is that the CSS style of your HTML template may conflict with Google Code Prettify CSS style. If Google Code Prettify does not work well, you can check whether the CSS style is correct.</p>
+
+<h3 id="mathjax">MathJax</h3>
+
+<p>My blog usually involves some mathematics, so I need to figure out the way to render nice math expressions. And <a href="http://www.mathjax.org/"><strong>MathJax</strong></a> is my solution.</p>
+
+<p>Since MathJax is very similar to LateX, it is very easy to use. For details of syntax, you can refer to <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference"><strong>MathJax basic tutorial and quick reference</strong></a>.</p>
+
+<p>To enable MathJax, you should include the following JavaScript in you HTML file.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+&lt;/script&gt;
+</code></pre></div>
+<p>However, MathJax does not support displaying inline formulas with <code>$...$</code>. To change the setting, you should include another snippet.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+&lt;/script&gt;
+</code></pre></div>
+<p>But right now you may find if you input formulas like <code>$x_i^2+x_j^2$</code>, MathJax cannot correctly interpret it, because Markdown renderer will parse the contents between two underlines to be emphasis. To avoid this, you are supposed to change the Markdown setting in the configuration of Jekyll.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">markdown: redcarpet
+redcarpet:
+  extensions: [&quot;no_intra_emphasis&quot;]
+</code></pre></div>
+<h3 id="full-text-search">Full-text Search</h3>
+
+<p>It is cool to set up a full-text search engine for my own blog. I tried to insert Google Custom Search to my blog. However, not all my web pages are embodied by Google, so some pages cannot be searched. Hence, I found <a href="https://github.com/slashdotdash/jekyll-lunr-js-search"><strong>jekyll-lunr-js-search</strong></a> and managed to establish my own search engine by it.</p>
+
+<p>You can refer to the introduction for the tool which is very clear and make you website searchable step by step. I personally recommend to install jekyll-lunr-js-search by copying the plugin to you Jekyll site. I have tried both methods, but the first one did not work well.</p>
+
+<hr>
+
+<h2 id="words-at-the-end">Words at the End</h2>
+
+<p>I wish my blogs can help you establish your own website, and if you have any question or if there is anything wrong with what I said, please no hesitate to leave a comment.</p>
+
+<p>The repository of my blog is available at <a href="https://github.com/Zhou-Ao/Zhou-Ao.github.io"><strong>GitHub</strong></a>, you can take it as a vivid example of what I have introduced.</p>
+
+            </div>
+            <br />
+            <!-- Disqus Comments -->
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+            <div class="backtotop">
+                <a href="#" class="fa fa-arrow-circle-up">Top</a>
+            </div>
+            <!-- Navigator -->
+            <div class="previous_next">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                    <a href="/blog/Hacker%20on%20the%20Way.html" title="First post" class="fa fa-fast-backward"></a>
+                    &nbsp;&nbsp;
+                    
+                
+                
+                    
+                    <a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(II).html" title="Previous post" class="fa fa-backward"></a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="/blog" class="fa fa-home">Blog</a>
+            </li>
+            <li><a href="/project" class="fa fa-pencil">Project</a>
+            </li>
+            <li><a href="/me" class="fa fa-book">Me</a>
+            </li>
+            <li><a href="/about" class="fa fa-cog">About</a>
+            </li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <ul class="copyright">
+    <li>&copy; 2014 Zhou Ao.</li>
+    <li>All contents under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC) BY-NC-SA license</a>, unless otherwise noted.
+    </li>
+</ul>
+
+    </footer>
+</body>
+
+</html>

@@ -55,7 +55,7 @@
 
 <!-- Include Icon -->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Include Tree of Content -->
+<!-- Include Table of Content -->
 <script type="text/javascript" src="/js/toc.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -106,7 +106,8 @@
 <li>Set up Github and Github Pages</li>
 <li>Learn how to use Jekyll</li>
 <li>Web pages design</li>
-<li>Set up Tree of Contents</li>
+<li>Set up Table of Contents</li>
+<li>Set up Google Code Prettify</li>
 <li>Set up MathJax</li>
 <li>Set up full-text search</li>
 </ul>
@@ -161,6 +162,9 @@ Make sure that `gem install pg -v '0.13.2'` succeeds before bundling.
 <p>A basic structure of Jekyll site looks like this:
 <pre><code class="language-bash" data-lang="bash">.
 ├── _config.yml
+├── _drafts
+<span class="p">|</span>   ├── begin-with-the-crazy-ideas.textile
+<span class="p">|</span>   └── on-simplicity-in-technology.markdown
 ├── _includes
 <span class="p">|</span>   ├── footer.html
 <span class="p">|</span>   └── header.html
@@ -230,6 +234,10 @@ category: blog
 <h4 id="_includes">_includes</h4>
 
 <p>You can put files under this directory, and then use the liquid tag <code>{% include file.ext %}</code> to include them in files in <code>_layouts</code> or any other file started with the YAML front matter.</p>
+
+<h4 id="_drafts">_drafts</h4>
+
+<p>There you can put your unpublished drafts. The format of these drafts is without a date: <code>title.MARKUP</code>. To preview your site with drafts, you can just run the command <code>bundle exec jekyll serve</code> or <code>bundle exec jekyll build</code> with the <code>--draft</code> switch.</p>
 
 <h3 id="liquid">Liquid</h3>
 
@@ -301,10 +309,14 @@ category: blog
                     
                 
                     
+                
+                    
                     <a href="/blog/Hacker%20on%20the%20Way.html" title="First post" class="fa fa-fast-backward"></a>
                     &nbsp;&nbsp;
                     
                 
+                
+                    
                 
                     
                     <a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(I).html" title="Previous post" class="fa fa-backward"></a>
@@ -319,6 +331,12 @@ category: blog
                     
                 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                    
+                    <a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(III).html" title="Next post" class="fa fa-forward"></a>
+                    &nbsp;&nbsp;
+                    <a href="/blog/Back%20to%20the%20Past%20and%20Start%20Blogging%20(III).html" title="Last post" class="fa fa-fast-forward"></a>
+                    
                 
                     
                 

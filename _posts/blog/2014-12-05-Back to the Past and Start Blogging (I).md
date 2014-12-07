@@ -14,7 +14,8 @@ After getting everything ready in my website, I would like to share what I did t
 - Set up Github and Github Pages
 - Learn how to use Jekyll
 - Web pages design
-- Set up Tree of Contents
+- Set up Table of Contents
+- Set up Google Code Prettify
 - Set up MathJax
 - Set up full-text search
 

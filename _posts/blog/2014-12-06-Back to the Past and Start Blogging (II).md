@@ -14,7 +14,8 @@ After getting everything ready in my website, I would like to share what I did t
 - Set up Github and Github Pages
 - Learn how to use Jekyll
 - Web pages design
-- Set up Tree of Contents
+- Set up Table of Contents
+- Set up Google Code Prettify
 - Set up MathJax
 - Set up full-text search
 
@@ -70,6 +71,9 @@ Jekyll has very substantial [**documents**](http://jekyllrb.com/docs/home/) for 
 A basic structure of Jekyll site looks like this:
 <pre><code class="language-bash" data-lang="bash">.
 ├── _config.yml
+├── _drafts
+<span class="p">|</span>   ├── begin-with-the-crazy-ideas.textile
+<span class="p">|</span>   └── on-simplicity-in-technology.markdown
 ├── _includes
 <span class="p">|</span>   ├── footer.html
 <span class="p">|</span>   └── header.html
@@ -143,6 +147,10 @@ You can also custom [**permalink**](http://jekyllrb.com/docs/permalinks/) for yo
 ####_includes####
 
 You can put files under this directory, and then use the liquid tag {% raw %}```{% include file.ext %}```{% endraw %} to include them in files in ```_layouts``` or any other file started with the YAML front matter.
+
+####_drafts####
+
+There you can put your unpublished drafts. The format of these drafts is without a date: ```title.MARKUP```. To preview your site with drafts, you can just run the command ```bundle exec jekyll serve``` or ```bundle exec jekyll build``` with the ```--draft``` switch.
 
 ###Liquid###
 

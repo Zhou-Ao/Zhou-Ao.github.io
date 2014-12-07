@@ -43,10 +43,12 @@ layout: blank
         <!-- One -->
         {% for post in site.categories.project %}
         <section id="one">
+            {% if forloop.first %}
             <!-- Search Icon -->
             <div class="search">
                 <a href="/search" class="fa fa-search">Search</a>
             </div>
+            {% endif %}
             <header class="major">
                 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             </header>
