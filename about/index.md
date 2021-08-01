@@ -8,7 +8,6 @@ category: about
     I design and develop this site using 
     <a href="http://jekyllrb.com/">
         <img src="/images/jekyll-logo.png" style="width: 100px; height: 30px" alt="Jekyll • Transform your plain text into static websites and blogs">
-        </imag>
     </a>, 
     following these two styleguides, <a href="http://html5up.net/uploads/demos/aerial">Aerial</a> and <a href="http://html5up.net/uploads/demos/strata">Strate</a>.
 </p>
